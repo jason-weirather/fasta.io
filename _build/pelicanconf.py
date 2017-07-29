@@ -1,11 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from uuid import uuid4
 
 AUTHOR = 'Jason L. Weirather, Ph.D.'
 SITENAME = 'A bioinformatics adventure'
-SITEURL = 'https://fasta.io'
-THEME = "../pelican-themes/simple-bootstrap"
+SITEURL = 'http://fasta.io'
+THEME = "../my-theme/"
+
+def get_uuid4_string(not_used):
+   return str(uuid4())
+
+JINJA_FILTERS = {'uuid4':get_uuid4_string}
 
 PATH = 'content'
 
@@ -21,7 +27,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
+LINKS = (('github', 'https://github.com/jason-weirather'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
          ('You can modify those links in your config file', '#'),)

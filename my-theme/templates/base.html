@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   {% block head %}
+   <title>{% block title %} {{ SITENAME }} {% endblock title %}</title>
+   <meta charset="UTF-8" />
+   <link href="{{ SITEURL }}/theme/static/css/style.css?{{ 'unused'|uuid4 }}" rel="stylesheet" />
+   {% endblock head %}
+   </head>
+</html>
