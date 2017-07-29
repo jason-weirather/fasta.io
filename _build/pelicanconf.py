@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Jason L. Weirather, Ph.D.'
 SITENAME = 'A bioinformatics adventure'
-SITEURL = ''
+SITEURL = 'https://fasta.io'
+THEME = "../pelican-themes/blueidea"
 
 PATH = 'content'
 
@@ -33,4 +34,4 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-OUTPUT_PATH = './'
+OUTPUT_PATH = '../'
