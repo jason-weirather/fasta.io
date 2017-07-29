@@ -1,0 +1,10 @@
+/* Make the articles look pretty */
+.highlight {
+   padding: 0.2em;
+   margin-top: 0.2em;
+   margin-left: 1em;
+   overflow-wrap: normal;
+   overflow-x: scroll;
+   max-width: 90%;
+   border: thin solid #000000;
+}

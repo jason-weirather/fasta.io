@@ -4,10 +4,12 @@ from __future__ import unicode_literals
 from uuid import uuid4
 
 AUTHOR = 'Jason L. Weirather, Ph.D.'
-SITENAME = 'A bioinformatics adventure'
-#SITEURL = 'http://fasta.io'
+SITENAME = 'fasta.io'
+SITESUBTITLE = 'bioinformatics adventures'
+SITEHOOK = 'lost in a random forest of trees'
+SITEEMOJIS = '🌳🌲🌳🤓🗺🌴🌳🌲'
 SITEURL = ''
-THEME = "../my-theme/"
+THEME = "../fasta-theme/"
 
 def get_uuid4_string(not_used):
    return str(uuid4())

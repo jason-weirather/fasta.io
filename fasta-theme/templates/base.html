@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   {% block head %}
+   <title>{% block title %} {{ SITENAME }} {% endblock title %}</title>
+   <meta charset="UTF-8" />
+   {# Hack of a jinja2 filter to add uuid4's to links to skirt browser caching #}
+   <link href="{{ SITEURL }}/theme/css/reset.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
+   <link href="{{ SITEURL }}/theme/css/style.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
+   <link href="{{ SITEURL }}/theme/css/pygments.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
+   <link href="{{ SITEURL }}/theme/css/articles.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
+   <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/myfav.png" />
+   {% endblock head %}
+   </head>
+   <body>
+      <div id="header">
+      {% block header %}
+      {% include 'header.html' %}
+      {% endblock header %}
+      </div>
+      <div id="content">
+      {% block content %}
+      {% endblock content %}
+      </div>
+   </body>
+</html>
