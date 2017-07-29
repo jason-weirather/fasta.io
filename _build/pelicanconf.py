@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Jason L. Weirather, Ph.D.'
 SITENAME = 'A bioinformatics adventure'
 SITEURL = 'https://fasta.io'
-THEME = "../pelican-themes/blueidea"
+THEME = "../pelican-themes/simple-bootstrap"
 
 PATH = 'content'
 
