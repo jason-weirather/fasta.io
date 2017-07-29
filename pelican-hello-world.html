@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Pelican Hello World - A bioinformatics adventure</title>
+   <meta charset="UTF-8" />
+   <link href="/theme/static/css/style.css?version=547ed4f0-2276-48e2-90a9-8d2a85d0c7ee" rel="stylesheet" />
+   </head>
+   <body>
+      <p>Above content block.</p>
+
+<section id="content" class="article content">
+  <header>
+    <h2 class="entry-title">
+      <a href="/pelican-hello-world.html" rel="bookmark"
+         title="Permalink to Pelican Hello World">Pelican Hello World</a></h2>
+ 
+  </header>
+
+  <div class="entry-content">
+    <p>I wonder how many blogs start with a note on how they made their blog? 🤔
+It seems like an appropriate enough way to go.  I did have one little bit of development from this process I think is worth sharing. I’m building this on Pelican which uses Jinja2 templates.  This is convenient because I’ve also been using Flask recently, which also uses Jinja 2.</p>
+<h3>Objective</h3>
+<p>Ensure browser updates linked stylesheets each time the site is rebuilt, rather than using cached versions.</p>
+<h3>Strategy</h3>
+<p>Add a random version identifier to the URL of the stylesheet. I saw this trick on stackoverflow<a href="https://stackoverflow.com/a/2263105">1</a> and got it work in the Jinja2 framework this blog is using. Each time the site is built, a random string is added at the end of the URL and the browser is encouraged to reload this new entity. A good and a bad thing to this approach is that the version of the CSS is only updated when the site is rebuilt, not when the client loads the site.  But thats fine with me, because we will rebuilt it on each update.</p>
+<h3>Code</h3>
+<p>Where a version string is added to the URL of the style sheet. I wanted to do something like that without this blog since I’ll be editing the style sheet a lot, and I found a way to get UUID4’s into the jinja2.  Its kind of a hack because I could only find a way to make filter functions.  So thats what I setup first.</p>
+<p><code>pelicanconf.py</code></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid4</span>
+<span class="k">def</span> <span class="nf">get_uuid4_string</span><span class="p">(</span><span class="n">not_used</span><span class="p">):</span>
+   <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid4</span><span class="p">())</span>
+<span class="n">JINJA_FILTERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;uuid4&#39;</span><span class="p">:</span><span class="n">get_uuid4_string</span><span class="p">}</span>
+</pre></div>
+
+
+<p>Now with the filter in place we can put it to work to emit UUID4 strings.</p>
+<p><code>base.html</code></p>
+<div class="highlight"><pre><span></span><span class="c">{# Hack of a jinja2 filter to add uuid4&#39;s to links to skirt browser caching #}</span><span class="x"></span>
+<span class="x">&lt;link href=&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="x">/theme/static/css/style.css?version=</span><span class="cp">{{</span> <span class="s1">&#39;whatever&#39;</span><span class="o">|</span><span class="nf">uuid4</span> <span class="cp">}}</span><span class="x">&quot; rel=&quot;stylesheet&quot; /&gt;</span>
+</pre></div>
+
+
+<h3>Result</h3>
+<p>And if we inspect the html of this page… <code>index.html</code> we can see it looks okay!</p>
+<div class="highlight"><pre><span></span>   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World - A bioinformatics adventure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+   <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/theme/static/css/style.css?version=7921c390-0b9d-4c6b-81a0-6e18fd59683d&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+  </div><!-- /.entry-content -->
+   <footer class="post-info text-muted">
+    Posted on <abbr class="published" title="2017-07-29T00:00:00-04:00">
+      Sat 29 July 2017
+    </abbr>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/jason-l-weirather.html">Jason L Weirather</a>
+    </address> in <a href="/category/python.html">Python</a> Tagged <a href="/tag/pelican.html">pelican </a><a href="/tag/blog.html">blog </a>  </footer><!-- /.post-info -->
+</section>
+
+   </body>
+</html>

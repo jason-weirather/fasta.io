@@ -4,7 +4,13 @@
    {% block head %}
    <title>{% block title %} {{ SITENAME }} {% endblock title %}</title>
    <meta charset="UTF-8" />
-   <link href="{{ SITEURL }}/theme/static/css/style.css?{{ 'unused'|uuid4 }}" rel="stylesheet" />
+   {# Hack of a jinja2 filter to add uuid4's to links to skirt browser caching #}
+   <link href="{{ SITEURL }}/theme/static/css/style.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
    {% endblock head %}
    </head>
+   <body>
+      <p>Above content block.</p>
+      {% block content %}
+      {% endblock content %}
+   </body>
 </html>
