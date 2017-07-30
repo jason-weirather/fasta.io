@@ -2,17 +2,12 @@
 {% block title %}{{ article.title }} - {{SITENAME}}{% endblock title %}
 {% block content %}
 <article>
-    <div class="entry-block">
-      <header>
-        <p class="entry-title">
-          <span class='fasta_header_symbol'>></span><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></p>
-      </header>
-
-    <div class="entry-content">
-      {{ article.content }}
-    </div>
-  </div>
+   <p class="entry-title">
+          <span class='fasta_header_symbol'>></span><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+   </p>
+   <div class="entry-content">
+         {{ article.content }}
+   </div>
 </article>
    <footer class="post-info text-muted">
     Posted on <abbr class="published" title="{{ article.date.strftime('%Y-%m-%d')}}">

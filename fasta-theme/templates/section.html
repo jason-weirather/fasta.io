@@ -1,0 +1,13 @@
+{% for article in filtered_articles %}
+<div class="content-container">
+   <div><span class="content-tag">{{ section_tag }}</span></div>
+   <div class="content-block">
+      <article>
+         <p class="entry-title">
+               <span class='fasta_header_symbol'>></span><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a> <span class='date'>{{article.date.strftime('%Y-%m-%d')}}</span>
+         </p>
+         <div class="entry-content">{{ article.summary }}</div>
+      </article>
+   </div>
+</div>
+{% endfor %}

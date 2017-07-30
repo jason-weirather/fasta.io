@@ -5,8 +5,8 @@ from uuid import uuid4
 
 AUTHOR = 'Jason L. Weirather, Ph.D.'
 SITENAME = 'fasta.io'
-SITESUBTITLE = 'a bioinformatics engineer going on adventures'
-SITEHOOK = 'lost in a random forest of trees'
+SITESUBTITLE1 = 'a bioinformatics engineer going on adventures;'
+SITESUBTITLE2 = 'lost in a random forest of trees';
 SITEEMOJIS = '🌳🌲🌳🤓🗺🌴🌳🌲'
 SITEURL = 'http://fasta.io'
 THEME = "../fasta-theme/"
