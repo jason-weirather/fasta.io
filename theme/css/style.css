@@ -2,18 +2,24 @@ html {
 	margin:0.4em;
 	font-family: 'Fira Mono', monospace;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Press Start 2P', cursive;
+a {
+	text-decoration: none;
+	border-bottom: dashed thick #DDDDDD;
+	color: #000000;
+	font-weight: bold;
 }
-html header,h1,h2,h3,h4,h5,h6 {
+header,h1,h2,h3,h4,h5,h6 {
 	font-family: 'Press Start 2P', cursive;
 	padding-bottom: 0.5em;
 	padding-top: 0.5em;
 }
-html p {
+p {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	line-height: 120%;
+}
+.emojis {
+	font-size:2em;
 }
 #content article {
 	margin: 0.5em;
@@ -28,12 +34,6 @@ html p {
 	border-radius: 0.5em;
 	font-family: 'Fira Mono', monospace;
 
-}
-#content article header a {
-	text-decoration: none;
-	border-bottom: dashed thick #DDDDDD;
-	color: #000000;
-	font-weight: bold;
 }
 .fasta_header_symbol {
 	font-size: 130%;

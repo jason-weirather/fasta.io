@@ -5,10 +5,10 @@ from uuid import uuid4
 
 AUTHOR = 'Jason L. Weirather, Ph.D.'
 SITENAME = 'fasta.io'
-SITESUBTITLE = 'bioinformatics adventures'
+SITESUBTITLE = 'a bioinformatics engineer going on adventures'
 SITEHOOK = 'lost in a random forest of trees'
 SITEEMOJIS = '🌳🌲🌳🤓🗺🌴🌳🌲'
-SITEURL = ''
+SITEURL = 'https://fasta.io'
 THEME = "../fasta-theme/"
 
 def get_uuid4_string(not_used):
