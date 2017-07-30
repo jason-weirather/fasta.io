@@ -3,10 +3,11 @@
    <head>
    <title>Pelican Hello World - fasta.io</title>
    <meta charset="UTF-8" />
-   <link href="/theme/css/reset.css?version=76ad7d4e-ba11-4e86-971f-7cef20d395d6" rel="stylesheet" />
-   <link href="/theme/css/style.css?version=25206d01-dc56-4a4b-8a22-b9034a2640e2" rel="stylesheet" />
-   <link href="/theme/css/pygments.css?version=58160a7e-aae5-4d7e-9fd1-729fc44d8db2" rel="stylesheet" />
-   <link href="/theme/css/articles.css?version=f101d407-9553-4268-aed5-5b97721eedad" rel="stylesheet" />
+   <link href="/theme/css/reset.css?version=94c01a74-f08c-4a11-bfcd-ae6456d46ce1" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Press+Start+2P" rel="stylesheet" />
+   <link href="/theme/css/style.css?version=211ab28d-261a-49f1-aea4-5e0e65b6746b" rel="stylesheet" />
+   <link href="/theme/css/pygments.css?version=69e94e54-524f-441c-a757-9de5fd1c9f2c" rel="stylesheet" />
+   <link href="/theme/css/articles.css?version=37cc9ed0-a223-422c-9157-8ee65fd65fa7" rel="stylesheet" />
    <link rel="shortcut icon" href="/theme/images/myfav.png" />
    </head>
    <body>
@@ -18,22 +19,19 @@
    <p>🌳🌲🌳🤓🗺🌴🌳🌲</p>
 </h2>
 <h3>Jason L. Weirather, Ph.D.</h3>      </div>
-      <div id="content">
+      <section id="content">
+<article>
+    <div class="entry-block">
+      <header>
+        <p class="entry-title">
+          <span class='fasta_header_symbol'>></span><a href="/pelican-hello-world.html" rel="bookmark"
+         title="Permalink to Pelican Hello World">Pelican Hello World</a></p>
+      </header>
 
-<section id="content" class="article content">
-  <header>
-    <h2 class="entry-title">
-      <a href="/pelican-hello-world.html" rel="bookmark"
-         title="Permalink to Pelican Hello World">Pelican Hello World</a></h2>
- 
-  </header>
-
-  <div class="entry-content">
-    <p>I wonder how many blogs start with a note on how they made their blog? 🤔
-It may be a bit hackneyed.  </p>
-<p>I’m building this on Pelican, a python based platform which uses Jinja2 templates.  This is convenient for me because I’ve also been using Flask recently, where I also make use of Jinja2 templates.</p>
-<p>They are pretty intuative and easy to get into ways to block off an organize HTML.</p>
-<p>I did have one little bit of development from this process I think is worth sharing.</p>
+    <div class="entry-content">
+      <p>I bet theres a lot of blogs out there that start with musings on making the blog. 🤔 This is a nothing-special pelican jinja2 static site getting hosted on GitHub.  </p>
+<p>Jinja2 templates are really nice and since I'm using them for Flask recently, they seem like a major evolution beyond php for reusing code.</p>
+<p>Heres one fun thing to share.  A bit of a hack to get Jinja2 to emit UUID4s on the page.</p>
 <h3>Objective</h3>
 <p>Ensure browser updates linked stylesheets each time the site is rebuilt, rather than using cached versions.</p>
 <h3>Strategy</h3>
@@ -63,16 +61,16 @@ It may be a bit hackneyed.  </p>
    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/theme/static/css/style.css?version=7921c390-0b9d-4c6b-81a0-6e18fd59683d&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </pre></div>
-  </div><!-- /.entry-content -->
+    </div>
+  </div>
+</article>
    <footer class="post-info text-muted">
-    Posted on <abbr class="published" title="2017-07-29T00:00:00-04:00">
-      Sat 29 July 2017
+    Posted on <abbr class="published" title="2017-07-29">
+      2017-07-29
     </abbr>
     <address class="vcard author">
       by <a class="url fn" href="/author/jason-l-weirather.html">Jason L Weirather</a>
-    </address> in <a href="/category/python.html">Python</a> Tagged <a href="/tag/pelican.html">pelican </a><a href="/tag/blog.html">blog </a>  </footer><!-- /.post-info -->
-</section>
-
-      </div>
+    </address> in <a href="/category/python.html">Python</a> Tagged <a href="/tag/pelican.html">pelican </a><a href="/tag/blog.html">blog </a>  </footer>
+      </section>
    </body>
 </html>

@@ -6,6 +6,7 @@
    <meta charset="UTF-8" />
    {# Hack of a jinja2 filter to add uuid4's to links to skirt browser caching #}
    <link href="{{ SITEURL }}/theme/css/reset.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Press+Start+2P" rel="stylesheet" />
    <link href="{{ SITEURL }}/theme/css/style.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
    <link href="{{ SITEURL }}/theme/css/pygments.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
    <link href="{{ SITEURL }}/theme/css/articles.css?version={{ 'whatever'|uuid4 }}" rel="stylesheet" />
@@ -18,9 +19,9 @@
       {% include 'header.html' %}
       {% endblock header %}
       </div>
-      <div id="content">
+      <section id="content">
       {% block content %}
       {% endblock content %}
-      </div>
+      </section>
    </body>
 </html>

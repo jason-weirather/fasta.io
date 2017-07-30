@@ -1,10 +1,16 @@
 /* Make the articles look pretty */
 .highlight {
-   padding: 0.2em;
+   padding: 0.5em;
    margin-top: 0.2em;
+   margin-bottom: 0.2em;
    margin-left: 1em;
    overflow-wrap: normal;
-   overflow-x: scroll;
+   overflow-x: auto;
    max-width: 90%;
    border: thin solid #000000;
+}
+code {
+	background-color: #EEEEEE;
+	padding: 0.3em;
+    border-radius: 0.3em;
 }
