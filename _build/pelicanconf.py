@@ -8,7 +8,7 @@ SITENAME = 'fasta.io'
 SITESUBTITLE1 = 'a bioinformatics engineer going on adventures;'
 SITESUBTITLE2 = 'lost in a random forest of trees';
 SITEEMOJIS = '🌳🌲🌳🤓🗺🌴🌳🌲'
-SITEURL = 'http://fasta.io'
+SITEURL = 'http://localhost:8000'
 THEME = "../fasta-theme/"
 
 def get_uuid4_string(not_used):

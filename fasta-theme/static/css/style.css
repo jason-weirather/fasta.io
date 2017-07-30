@@ -11,8 +11,9 @@ a {
 }
 .entry-title,h1,h2,h3,h4,h5,h6 {
 	font-family: 'Press Start 2P', cursive;
-	padding-bottom: 0.2em;
+	padding-bottom: 0.5em;
 	padding-top: 0.2em;
+	line-height: 130%;
 }
 p {
 	padding-top: 0.5em;
@@ -20,7 +21,7 @@ p {
 	line-height: 130%;
 }
 .emojis {
-	font-size: 1.5em;
+	font-size: 2em;
 	/*line-height:3em;*/
 }
 #header .subtitle, h1 {
