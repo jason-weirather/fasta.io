@@ -1,21 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-{# Filter each section #}
-
-{# Blog Section #}
-{% with filtered_articles=articles_page.object_list, section_tag="BLOG" %}
-{% include "section.html" %}
-{% endwith %}
-
-{# Reviews Section #}
-{% with filtered_articles=articles_page.object_list, section_tag="REVIEWS" %}
-{% include "section.html" %}
-{% endwith %}
-
-{# Guides Section #}
-{% with filtered_articles=articles_page.object_list, section_tag="GUIDES" %}
-{% include "section.html" %}
-{% endwith %}
+{% for CATEGORY, ARTICLES in categories %}
+   {# Filter each section #}
+   {% with filtered_articles=ARTICLES, section_tag=CATEGORY %}
+   {% include "section.html" %}
+   {% endwith %}
+{% endfor %}
 
 {% endblock content %}

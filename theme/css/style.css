@@ -11,6 +11,7 @@ a {
 }
 .entry-title,h1,h2,h3,h4,h5,h6 {
 	font-family: 'Press Start 2P', cursive;
+	font-size: 1.1em;
 	padding-bottom: 0.5em;
 	padding-top: 0.2em;
 	line-height: 130%;
@@ -31,6 +32,10 @@ p {
 #content {
 	margin-top:1em;
 }
+footer {
+	padding-bottom:1em;
+	line-height: 150%;
+}
 #content .content-tag {
 	display: block;
 	position: absolute;
@@ -43,21 +48,28 @@ p {
 	padding: 0.2em;
 	border-radius: 0.4em;
 	font-size: 1.25em;
+	text-transform: uppercase;
 }
 #content .content-container {
 	position: relative;
 	margin-bottom: 1em;
 	padding-right: 0.5em;
-	max-width: 90%;
+	max-width: 95%;
+	background-color: #fffefc;
+	border: medium solid #eff4f9;
+	border-radius: 1em 0em 1em 0em;
 }
 #content article {
-	background-color: #fffefc;
-	padding: 0.2em;
-	border: medium solid #eff4f9;
-	border-radius: 0.5em;
 	font-family: 'Fira Mono', monospace;
+	padding: 0.2em;
 }
 .fasta_header_symbol {
 	font-size: 1em;
 	padding-right:0.2em;
+}
+.footer-date {
+	position:relative;
+	top:-1em;
+	font-size:0.65em;
+	color: #333333;
 }

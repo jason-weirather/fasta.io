@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
    <head>
-   <title>Pelican Hello World - fasta.io</title>
+   <title>Jinja2 filter as a UUID4 emitter - fasta.io</title>
    <meta charset="UTF-8" />
-   <link href="/theme/css/reset.css?version=1a571027-fd38-4673-9bb0-502589465e5c" rel="stylesheet" />
+   <link href="/theme/css/reset.css?version=0f4f4b41-3f71-422e-889b-4cd59a97fece" rel="stylesheet" />
    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Press+Start+2P" rel="stylesheet" />
-   <link href="/theme/css/style.css?version=2ba65b2a-e37a-4482-a8cb-f97be05bfded" rel="stylesheet" />
-   <link href="/theme/css/pygments.css?version=b4f01910-fc6b-407c-826a-297d1efc111c" rel="stylesheet" />
-   <link href="/theme/css/articles.css?version=03ef1c34-376b-4bf7-91db-b7de54dfc5c3" rel="stylesheet" />
+   <link href="/theme/css/style.css?version=1ee2c4f4-b76d-48ae-92d4-050af1633893" rel="stylesheet" />
+   <link href="/theme/css/pygments.css?version=d6313263-446c-47f4-aa07-a10a29777149" rel="stylesheet" />
+   <link href="/theme/css/articles.css?version=b3e6460e-4b4a-4808-8717-8386a357cc32" rel="stylesheet" />
    <link rel="shortcut icon" href="http://fasta.io/theme/images/myfav.png" />
    </head>
    <body>
@@ -21,7 +21,7 @@
 <div class="content-container">
 <article>
    <p class="entry-title">
-          <span class='fasta_header_symbol'>></span><a href="http://fasta.io/pelican-hello-world.html" rel="bookmark" title="Permalink to Pelican Hello World">Pelican Hello World</a>
+          <span class='fasta_header_symbol'>></span><a href="http://fasta.io/pelican-hello-world.html" rel="bookmark" title="Permalink to Jinja2 filter as a UUID4 emitter">Jinja2 filter as a UUID4 emitter</a>
    </p>
    <div class="entry-content">
          <p>I bet theres a lot of blogs out there that start with musings on making the blog. 🤔 This is a nothing-special pelican jinja2 static site getting hosted on GitHub.  </p>
@@ -30,7 +30,7 @@
 <h3>Objective</h3>
 <p>Ensure browser updates linked stylesheets each time the site is rebuilt, rather than using cached versions.</p>
 <h3>Strategy</h3>
-<p>Use Jinja2 to add a random version identifier to the URL of the stylesheet. I saw this trick of adding a random identifyer to the URL over on stackoverflow<a href="https://stackoverflow.com/a/2263105">1</a> and got it work in the Jinja2 framework this blog is using. Each time the site is built, a random string is added as a GET format variable on the URL and thus the browser is encouraged to reload this new entity. A good and a bad thing to this approach is that the version of the CSS is only updated when the site is rebuilt, not every time the client loads the site.  If you need it every time ... better be using flask or javascript to accomplish that.  Fortunetly this is exactly the behavior we need for a static site like this.</p>
+<p>Use Jinja2 to add a random version identifier to the URL of the stylesheet. I saw this trick of adding a random identifyer to the URL over on stackoverflow<a href="https://stackoverflow.com/a/2263105">1</a> and got it working in the Jinja2 framework this blog is using. Each time the site is built, a random string is added as a GET format variable on the URL and thus the browser is encouraged to reload this new entity. A good and a bad thing to this approach is that the version of the CSS is only updated when the site is rebuilt, not every time the client loads the site.  If you need it every time ... better be using flask or javascript to accomplish that.  Fortunetly this is exactly the behavior we need for a static site like this.</p>
 <h3>Code</h3>
 <p>Where a version string is added to the URL of the style sheet. I wanted to do something like that without this blog since I’ll be editing the style sheet a lot, and I found a way to get UUID4’s into the jinja2.  Its kind of a hack because I could only find a way to make filter functions.  So thats what I setup first.</p>
 <p><code>pelicanconf.py</code></p>
@@ -57,14 +57,12 @@
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </pre></div>
    </div>
+   <footer>
+      Posted on <abbr class="published" title="2017-07-29">2017-07-29</abbr>
+      <address class="vcard author">
+         by <a class="url fn" href="http://fasta.io/author/jason-l-weirather-phd.html">Jason L. Weirather, Ph.D.</a>
+      </address> in <a href="http://fasta.io/category/blog.html">blog</a> Tagged <a href="http://fasta.io/tag/pelican.html">pelican </a><a href="http://fasta.io/tag/python.html">python </a><a href="http://fasta.io/tag/jinja2.html">jinja2 </a><a href="http://fasta.io/tag/css.html">css </a>    </footer>
 </article>
-   <footer class="post-info text-muted">
-    Posted on <abbr class="published" title="2017-07-29">
-      2017-07-29
-    </abbr>
-    <address class="vcard author">
-      by <a class="url fn" href="http://fasta.io/author/jason-l-weirather.html">Jason L Weirather</a>
-    </address> in <a href="http://fasta.io/category/python.html">Python</a> Tagged <a href="http://fasta.io/tag/pelican.html">pelican </a><a href="http://fasta.io/tag/blog.html">blog </a>  </footer>
 </div>
       </section>
    </body>
